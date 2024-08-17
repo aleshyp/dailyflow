@@ -1,5 +1,5 @@
 
-![Logo](public/daily-flow.png)
+![Logo](public/daily-flow-light.png)
 
 
 # DailyFlow
