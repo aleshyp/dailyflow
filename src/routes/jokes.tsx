@@ -25,7 +25,10 @@ function Jokes() {
       <p className="transition-opacity opacity-0 group-has-[input:checked]:opacity-100">
         {joke.punchline}
       </p>
-      <button className="mt-4" onClick={() => window.location.reload()}>
+      <button
+        className="mt-4 p-inner-spacing bg-slate-400 text-white rounded-md shadow-sm"
+        onClick={() => window.location.reload()}
+      >
         Get Another Joke
       </button>
     </div>
