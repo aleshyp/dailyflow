@@ -14,7 +14,7 @@ export function createJokeQueryOptions() {
   return queryOptions({
     queryKey: ["joke"],
     queryFn: async () =>
-      fetch("https://official-jokes-api.appspot.com/random")
+      fetch("https://official-joke-api.appspot.com/random_joke")
         .then((res) => res.json())
         .then((data) => JokeSchema.parse(data)),
   })
