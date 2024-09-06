@@ -41,6 +41,7 @@
   --foreground: #333333;
   --primary: #00703f;
   --secondary: #ff0080;
+  --primary-button: #22c55e;
 }
 
 .dark {

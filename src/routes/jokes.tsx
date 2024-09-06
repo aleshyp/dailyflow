@@ -20,13 +20,13 @@ function Jokes() {
       <p className="font-bold">{joke.setup}</p>
       <div className="py-inner-spacing">
         Reveal Joke:
-        <input type="checkbox" />
+        <input type="checkbox" className="ml-2 transition-opacity" />
       </div>
       <p className="transition-opacity opacity-0 group-has-[input:checked]:opacity-100">
         {joke.punchline}
       </p>
       <button
-        className="mt-4 p-inner-spacing bg-slate-400 text-white rounded-md shadow-sm"
+        className="mt-4 p-inner-spacing bg-green-500 text-white rounded-md shadow-sm transition-colors hover:bg-green-400"
         onClick={() => window.location.reload()}
       >
         Get Another Joke
