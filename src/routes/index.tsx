@@ -1,15 +1,38 @@
 import { createFileRoute } from "@tanstack/react-router"
+import React, { useEffect, useState } from "react"
+
+const DarkModeToggle = () => {
+  const [darkMode, setDarkMode] = useState(() => {
+    return localStorage.getItem("dark-mode") === "true"
+  })
+
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add("dark")
+      localStorage.setItem("dark-mode", "true")
+    } else {
+      document.documentElement.classList.remove("dark")
+      localStorage.setItem("dark-mode", "false")
+    }
+  }, [darkMode])
+
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode)
+  }
+
+  return (
+    <button
+      className="mt-4 p-2 text-sm bg-gray-300 text-gray-600 rounded-md shadow-sm dark:bg-gray-700 dark:text-white"
+      onClick={toggleDarkMode}
+    >
+      Toggle Dark Mode
+    </button>
+  )
+}
+
+export default DarkModeToggle
 
 export const Route = createFileRoute("/")({
-  loader: () => {
-    const isSystemDark = matchMedia("(prefers-color-scheme: dark)").matches
-    const localTheme = localStorage.theme
-    const toggle = document.documentElement.classList.toggle.bind(
-      document.documentElement.classList,
-      "dark"
-    )
-    toggle(!localTheme ? isSystemDark : localTheme === "dark")
-  },
   component: Home,
 })
 // Create
@@ -17,8 +40,7 @@ function Home() {
   return (
     <div className="text-5xl p-spacing">
       <h1 className="pb-inner-spacing gap-spacing">Home</h1>
+      <DarkModeToggle />
     </div>
   )
 }
-
-document.documentElement.classList.toggle("dark")
