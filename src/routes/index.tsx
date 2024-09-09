@@ -21,12 +21,14 @@ const DarkModeToggle = () => {
   }
 
   return (
-    <button
-      className="mt-4 p-2 text-sm bg-gray-300 text-gray-600 rounded-md shadow-sm dark:bg-gray-700 dark:text-white"
-      onClick={toggleDarkMode}
-    >
-      Toggle Dark Mode
-    </button>
+    <div className="flex justify-center">
+      <button
+        className="mt-4 p-2 text-sm bg-gray-300 text-gray-600 rounded-md shadow-sm dark:bg-gray-700 dark:text-white"
+        onClick={toggleDarkMode}
+      >
+        Toggle Dark Mode
+      </button>
+    </div>
   )
 }
 
@@ -39,7 +41,9 @@ export const Route = createFileRoute("/")({
 function Home() {
   return (
     <div className="text-5xl p-spacing">
-      <h1 className="pb-inner-spacing gap-spacing">Home</h1>
+      <h1 className="pb-inner-spacing gap-spacing text-center">
+        Welcome to DailyFlow!
+      </h1>
       <DarkModeToggle />
     </div>
   )
