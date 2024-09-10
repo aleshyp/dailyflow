@@ -9,9 +9,15 @@ import { ReactQueryDevtools } from "@tanstack/react-query-devtools"
 export const Route = createRootRouteWithContext()({
   component: () => (
     <>
-      <div className="p-2 flex gap-2">
-        <Link to="/" className="[&.active]:font-bold">
+      <div className="p-4 flex gap-4">
+        <Link to="/" className="[&.active]:font-regular">
           Home
+        </Link>{" "}
+        <Link to="/" className="[&.active]:font-regular">
+          Habits
+        </Link>{" "}
+        <Link to="/" className="[&.active]:font-regular">
+          Profile
         </Link>{" "}
       </div>
       <hr />
