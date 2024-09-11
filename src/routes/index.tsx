@@ -37,6 +37,15 @@ export default DarkModeToggle
 export const Route = createFileRoute("/")({
   component: Home,
 })
+
+export const habitsRoute = createFileRoute("/")({
+  component: Habits,
+})
+
+export const profileRoute = createFileRoute("/")({
+  component: Profile,
+})
+
 // Create
 function Home() {
   return (
@@ -45,42 +54,28 @@ function Home() {
         Welcome to DailyFlow!
       </h1>
       <DarkModeToggle />
+    </div>
+  )
+}
 
-      <footer className="absolute inset-x-0 bottom-0 bg-gray-300 dark:bg-gray-700 dark:text-white py-6">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col items-center space-y-4 md:space-y-0 md:flex-row md:justify-center">
-            <nav className="flex justify-between w-full max-w-[500px] mx-auto">
-              <a
-                href="#"
-                className="text-gray-600 text-lg hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
-              >
-                Home
-              </a>
-              <a
-                href="#"
-                className="text-gray-600 text-lg hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
-              >
-                About
-              </a>
-              <a
-                href="#"
-                className="text-gray-600 text-lg hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
-              >
-                Services
-              </a>
-              <a
-                href="#"
-                className="text-gray-600 text-lg hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
-              >
-                Contact
-              </a>
-            </nav>
-          </div>
-          <div className="mt-6 text-sm text-center text-gray-500">
-            © 2024 DailyFlow. All rights reserved.
-          </div>
-        </div>
-      </footer>
+function Habits() {
+  return (
+    <div className="text-5xl p-spacing">
+      <h1 className="pb-inner-spacing gap-spacing text-center">
+        Here will be your habits!
+      </h1>
+      <DarkModeToggle />
+    </div>
+  )
+}
+
+function Profile() {
+  return (
+    <div className="text-5xl p-spacing">
+      <h1 className="pb-inner-spacing gap-spacing text-center">
+        This will be your profile!
+      </h1>
+      <DarkModeToggle />
     </div>
   )
 }
