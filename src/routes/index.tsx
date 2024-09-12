@@ -49,7 +49,7 @@ export const profileRoute = createFileRoute("/")({
 // Create
 function Home() {
   return (
-    <div className="text-5xl p-spacing">
+    <div className="text-5xl p-spacing pt-20">
       <h1 className="pb-inner-spacing gap-spacing text-center">
         Welcome to DailyFlow!
       </h1>
