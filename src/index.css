@@ -7,21 +7,22 @@
     --spacing: 1.5rem;
     --inner-spacing: 1rem;
 
-    @media screen(sm) {
+    /* Use Tailwind's responsive breakpoints */
+    @media (min-width: 640px) {
       :root {
         --spacing: 2rem;
         --inner-spacing: 1.5rem;
       }
     }
 
-    @media screen(md) {
+    @media (min-width: 768px) {
       :root {
         --spacing: 2.5rem;
         --inner-spacing: 2rem;
       }
     }
 
-    @media screen(lg) {
+    @media (min-width: 1024px) {
       :root {
         --spacing: 3rem;
         --inner-spacing: 2.5rem;
@@ -32,10 +33,13 @@
   body {
     @apply bg-background;
   }
+
   * {
     @apply text-foreground;
   }
 }
+
+/* Define root color variables */
 :root {
   --background: #f9f9f9;
   --foreground: #333333;
@@ -44,6 +48,7 @@
   --primary-button: #22c55e;
 }
 
+/* Dark mode variables */
 .dark {
   --background: #111111;
   --foreground: #f9f9f9;
