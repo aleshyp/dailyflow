@@ -15,6 +15,7 @@ DailyFlow is your ultimate companion for staying organized, productive, and on t
 - Awards and Achievements
 - Goal Creating / Tracking
 - Advanced Scheduling
+- Social Hub (Following, Posting, Commenting)
 
 ## Routes (Not Finalized)
 
@@ -31,19 +32,4 @@ DailyFlow is your ultimate companion for staying organized, productive, and on t
 - /tasks (Tasks)
 - /calendar (Calendar)
 - /notes (Notes)
-- /reminders (Reminders)
-- /health (Health)
-- /finance (Finance)
-- /travel (Travel)
 - /social (Social)
-- /education (Education)
-- /work (Work)
-- /family (Family)
-- /friends (Friends)
-- /health (Health)
-- /finance (Finance)
-- /travel (Travel)
-- /social (Social)
-- /education (Education)
-- /work (Work)
-- /family (Family)
