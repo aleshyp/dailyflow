@@ -10,18 +10,6 @@ export default function Header() {
         >
           Home
         </Link>
-        <Link
-          to="/habits"
-          className="[&.active]:font-regular text-gray-600 text-lg hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
-        >
-          Habits
-        </Link>
-        <Link
-          to="/profile"
-          className="[&.active]:font-regular text-gray-600 text-lg hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
-        >
-          Profile
-        </Link>
       </div>
     </header>
   )
