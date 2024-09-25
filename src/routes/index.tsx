@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router"
-import DarkModeToggle from "../components/darkModeToggle"
+import DarkModeToggle from "../components/DarkModeToggle"
 import QuoteComponent from "../components/QuoteComponent"
 
 export const Route = createFileRoute("/")({

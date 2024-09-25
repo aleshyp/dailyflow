@@ -1,36 +1,39 @@
 import React, { useEffect, useState } from "react"
-import { fetchStoicQuote } from "../api/stoicQuotesApi"
+import { fetchRandomQuote, ZenQuote } from "../api/zenQuotesApi"
 
-const QuoteComponent: React.FC = () => {
-  const [quote, setQuote] = useState<string | null>(null)
-  const [author, setAuthor] = useState<string | null>(null)
+const QuoteDisplay: React.FC = () => {
+  const [quote, setQuote] = useState<ZenQuote | null>(null)
   const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
     const getQuote = async () => {
       try {
-        const { quote, author } = await fetchStoicQuote()
-        setQuote(quote)
-        setAuthor(author)
+        const fetchedQuote = await fetchRandomQuote() // Fetch the quote
+        console.log("Fetched Quote:", fetchedQuote) // Debug log
+        setQuote(fetchedQuote) // Set the fetched quote
       } catch (err) {
-        setError("Failed to load the quote")
+        setError("Failed to load quote")
       }
     }
 
     getQuote()
   }, [])
 
+  // Debug log for error state
   if (error) {
-    return <div>{error}</div>
+    console.error("Error:", error)
+    return <p>{error}</p>
   }
+
+  // Debug log for quote state
+  console.log("Current Quote:", quote)
 
   return (
     <div>
       {quote ? (
-        <div>
-          <p>{quote}</p>
-          <p>— {author}</p>
-        </div>
+        <blockquote>
+          "{quote.q}" - {quote.a}
+        </blockquote>
       ) : (
         <p>Loading...</p>
       )}
@@ -38,4 +41,4 @@ const QuoteComponent: React.FC = () => {
   )
 }
 
-export default QuoteComponent
+export default QuoteDisplay
