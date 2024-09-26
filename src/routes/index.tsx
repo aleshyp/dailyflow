@@ -10,9 +10,7 @@ export const Route = createFileRoute("/")({
 function Home() {
   return (
     <div className="text-5xl p-spacing pt-20">
-      <h1 className="pb-inner-spacing gap-spacing text-center">
-        Welcome to DailyFlow!
-      </h1>
+      <h1 className="pb-8 gap-spacing text-center">Welcome to DailyFlow!</h1>
       <QuoteComponent />
       <DarkModeToggle />
     </div>
