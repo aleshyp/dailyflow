@@ -22,23 +22,23 @@ const QuoteComponent: React.FC = () => {
   }, [])
 
   if (loading) {
-    return <p>Loading...</p> // Display loading message while fetching
+    return <p className="flex justify-center text-sm">Loading...</p> // Display loading message while fetching
   }
 
   if (error) {
-    return <p>{error}</p> // Display error message if any
+    return <p className="flex justify-center text-sm">{error}</p> // Display error message if any
   }
 
   return (
-    <div>
+    <div className="flex flex-col justify-center items-center">
       {quote && (
-        <blockquote className="flex justify-center text-sm rounded-md p-4 bg-gray-300 dark:bg-gray-700">
+        <blockquote className="w-fit text-sm rounded-md p-4 mb-4 bg-gray-300 dark:bg-gray-700">
           "{quote.quote}"
         </blockquote>
       )}{" "}
       {/* Access the quote property */}
       <button
-        className="mt-4 p-2 text-sm transition-colors bg-gray-300 text-gray-600 hover:bg-gray-400 hover:text-gray-700 rounded-md shadow-sm dark:bg-gray-700 dark:hover:bg-gray-800 dark:text-white"
+        className="w-fit mt-4 p-3 text-sm transition-colors bg-gray-300 text-gray-600 hover:bg-gray-400 hover:text-gray-700 rounded-md shadow-sm dark:bg-gray-700 dark:hover:bg-gray-800 dark:text-white"
         onClick={getNewQuote}
       >
         Get Another Quote
